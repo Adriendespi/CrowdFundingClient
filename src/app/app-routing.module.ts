@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UserModule } from './modules/user/user.module';
+
 
 const routes: Routes = [
 {path:"user",loadChildren:()=>
 import('./modules/user/user.module').then(m=>m.UserModule)},
 
-{path:"user",loadChildren:()=>
+{path:"project",loadChildren:()=>
 import('./modules/project/project.module').then(m=>m.ProjectModule)},
 
 

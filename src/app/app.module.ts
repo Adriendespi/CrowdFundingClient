@@ -4,10 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
-import { UserModuleModule } from './user-module/user-module.module';
-import { ProjectModuleModule } from './project-module/project-module.module';
-import { CommentaryModuleModule } from './commentary-module/commentary-module.module';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserModule } from './modules/user/user.module';
+import { ProjectModule } from './modules/project/project.module';
+import { CommentaryModule } from './modules/commentary/commentary.module';
 
 
 @NgModule({
@@ -18,11 +19,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserModuleModule,
-    ProjectModuleModule,
-    CommentaryModuleModule,
+    UserModule,
+    ProjectModule,
+    CommentaryModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
     
     
     

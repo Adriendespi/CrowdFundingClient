@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { User, UserLogin, UserRegister } from '../models/user.model';
 import { Observable } from 'rxjs';
-
-
+import { User, UserRegister, UserLogin } from '../models/user.model';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserServiceService {
+export class UserService {
 
   url : string = "https://localhost:7108/api/User/";
 
@@ -38,10 +36,4 @@ GetAllUser():Observable<User[]>
 {
   return this._client.get<User[]>(this.url + "GetAll");
 }
-
-
 }
-
-
-
-

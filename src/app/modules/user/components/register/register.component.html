@@ -1,0 +1,18 @@
+<form [fromGroup]="forms" (ngSubmit)="OnSubmit()">
+    <div class="mb-3">
+      <label for="Pseudo" class="form-label">Email address</label>
+      <input type="text" class="form-control" id="Pseudo" formControlName="pseudo">
+      
+    </div>
+    <div class="mb-3">
+      <label for="mail" class="form-label">Email</label>
+      <input type="email" class="form-control" id="mail" formControlName="mail">
+    </div>
+
+    <div class="mb-3">
+        <label for="pwd" class="form-label">Email</label>
+        <input type="password" class="form-control" id="pwd" formControlName="pwd">
+      </div>
+    <button class="btn btn-primary" type="submit">Register</button>  
+</form>    
+   
