@@ -11,10 +11,12 @@ import { ProjectModule } from './modules/project/project.module';
 import { CommentaryModule } from './modules/commentary/commentary.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    AcceuilComponent
+    AcceuilComponent,
+   
   ],
   imports: [
     BrowserModule,

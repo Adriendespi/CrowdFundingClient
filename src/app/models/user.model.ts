@@ -16,6 +16,6 @@ export interface UserRegister
 }
 export interface UserLogin
 {
-    identifiant: string,
-    pwd: string
+    identifiant?: string,
+    pwd?: string
 }
