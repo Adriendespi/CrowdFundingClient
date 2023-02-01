@@ -1,8 +1,10 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AcceuilComponent } from './acceuil/acceuil.component';
 
 
 const routes: Routes = [
+{path:'',component: AcceuilComponent},
 {path:"user",loadChildren:()=>
 import('./modules/user/user.module').then(m=>m.UserModule)},
 

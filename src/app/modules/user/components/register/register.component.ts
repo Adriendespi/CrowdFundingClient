@@ -14,7 +14,7 @@ export class RegisterComponent {
 
   public form :FormGroup
   _service :UserService
-  _messageErro ?: string
+  messageError : string = ""
   
   
   constructor(service: UserService, _formBuilder:FormBuilder,private _router:Router) {
@@ -37,11 +37,11 @@ export class RegisterComponent {
       .subscribe({
         next: ()=> {this._service.Login({identifiant: this.form.value.mail, pwd: this.form.value.pwd})
                                   .subscribe({
-                                  next: (tokken)=> (this._router.navigate(['acceuil/'+tokken]))
+                                  next: (tokken)=> (localStorage.setItem('key',tokken) ,this._router.navigate([''] ))
                                   })
                                 
                     },
-        error : (err) => {this._messageErro = err}
+        error : (err) => {this.messageError = err}
         
         })
       
